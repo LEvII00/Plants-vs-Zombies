@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		img{
+			width: 100px;
+			position: absolute;
+			display: none;
+			
+		}
+	</style>
+</head>
+<body>
+	<div style="background-image: url(game.png); height: 1000px; background-size: 100% 100%;">
+		<img src="sunflower.png" class="table-sun" style="display: block; margin-left: 360px;">
+		<img src="peashooter.png" class="table-pea" style="display: block; margin-left: 300px; margin-top: 25px;">
+			
+		<!--цветы 1 ряд-->
+		<img class="plant" src="sunflower.png"  style=" margin-left: 33%; margin-top: 13%;">
+		<img class="plant" src="sunflower.png"  style=" margin-left: 33%; margin-top: 19%;">
+		<img class="plant" src="sunflower.png"  style=" margin-left: 33%; margin-top: 25%;">
+		<img class="plant" src="sunflower.png"  style=" margin-left: 33%; margin-top: 31%;">
+		<img class="plant" src="sunflower.png"  style=" margin-left: 33%; margin-top: 37%;">
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 17%; ">PLANT</button>	
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 23%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 29%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute;  margin-left: 33%; margin-top: 35%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 41%; ">PLANT</button>
+
+		<!--цветы 2 ряд-->
+		<img class="pea" src="peashooter.png"  style=" margin-left: 40%; margin-top: 13%; ">
+		<img class="pea" src="peashooter.png"  style=" margin-left: 40%; margin-top: 19%; ">
+		<img class="pea" src="peashooter.png"  style=" margin-left: 40%; margin-top: 25%; ">
+		<img class="pea" src="peashooter.png"  style=" margin-left: 40%; margin-top: 31%; ">
+		<img class="pea" src="peashooter.png"  style=" margin-left: 40%; margin-top: 37%; ">
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 17%; ">PLANT</button>	
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 23%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 29%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute;  margin-left: 40%; margin-top: 35%; ">PLANT</button>
+		<button class="but" style="color: red; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 41%; ">PLANT</button>
+
+
+		
+	</div>
+
+<script>
+	let ochki = 0;
+
+document.querySelectorAll(".but")[0].onclick = function(){
+   document.querySelectorAll(".plant")[0].style.display = "block";
+   	document.querySelectorAll(".but")[0].style.display = "none";
+   }
+   document.querySelectorAll(".but")[1].onclick = function(){
+   		document.querySelectorAll(".plant")[1].style.display = "block";
+   	 	document.querySelectorAll(".but")[1].style.display = "none";
+   }
+   document.querySelectorAll(".but")[2].onclick = function(){
+   		document.querySelectorAll(".plant")[2].style.display = "block";
+   	 	document.querySelectorAll(".but")[2].style.display = "none";
+   }
+   document.querySelectorAll(".but")[3].onclick = function(){
+   		document.querySelectorAll(".plant")[3].style.display = "block";
+   	 	document.querySelectorAll(".but")[3].style.display = "none";
+   }
+   document.querySelectorAll(".but")[4].onclick = function(){
+   		document.querySelectorAll(".plant")[4].style.display = "block";
+   	 	document.querySelectorAll(".but")[4].style.display = "none";
+   }
+   document.querySelectorAll(".but")[5].onclick = function(){
+   		document.querySelectorAll(".pea")[0].style.display = "block";
+   	 	document.querySelectorAll(".but")[5].style.display = "none";
+   }
+   document.querySelectorAll(".but")[6].onclick = function(){
+   		document.querySelectorAll(".pea")[1].style.display = "block";
+   	 	document.querySelectorAll(".but")[6].style.display = "none";
+   }
+   document.querySelectorAll(".but")[7].onclick = function(){
+   		document.querySelectorAll(".pea")[2].style.display = "block";
+   	 	document.querySelectorAll(".but")[7].style.display = "none";
+   }
+   document.querySelectorAll(".but")[8].onclick = function(){
+   		document.querySelectorAll(".pea")[3].style.display = "block";
+   	 	document.querySelectorAll(".but")[8].style.display = "none";
+   }
+   document.querySelectorAll(".but")[9].onclick = function(){
+   		document.querySelectorAll(".pea")[4].style.display = "block";
+   	 	document.querySelectorAll(".but")[9].style.display = "none";
+   }
+
+
+    document.querySelector(".table-pea").onclick = function(){
+    	document.querySelectorAll(".pea")[ochki].style.height = "200px";
+         ochki = ochki + 1;
+   }
+
+   document.querySelector(".table-sun").onclick = function(){
+    for(let index = 0; index < 5; index = index + 1){
+     document.querySelectorAll(".plant")[index].style.height = "225px";
+     }
+   }
+   document.querySelector(".table-pea").onclick = function(){
+    for(let index = 0; index < 5; index = index + 1){
+     document.querySelectorAll(".pea")[index].style.height = "225px";
+     }
+   }
+   document.querySelector(".table-pea").onclick = function(){
+    for(let index = 0; index < 5; index = index + 1){
+     document.querySelectorAll(".pea")[index].style.height = "225px";
+     document.querySelectorAll(".pea")[index].style = "url(https://i.pinimg.com/originals/0d/12/ae/0d12ae1ed407c42b07ea9b7901d6c919.jpg)";
+
+     }
+   }
+</script>
+</body>
+</html>
